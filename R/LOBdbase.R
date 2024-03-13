@@ -357,6 +357,11 @@ setMethod("show", "LOBdbase", function(object) {
     cat("Number of additional oxygen atoms:",
         paste(min(degree_oxidation(object), na.rm = TRUE),
               max(degree_oxidation(object), na.rm = TRUE), sep = "-"),"\n\n")
+    
+    cat("Contains retention time factor (RTF) data for",
+        length(unique(rtf(object)$compound_name)),"unique compounds using",
+        length(na.omit(unique(rtf(object)$standard))),"standards.",'\n')
+    cat("RTF datasets:",na.omit(unique(rtf(object)$dataset)),'\n\n')
 
   } else {
 

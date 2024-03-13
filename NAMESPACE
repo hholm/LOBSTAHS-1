@@ -56,5 +56,7 @@ exportMethods("show",
               "parent_elem_formula",
               "parent_elem_formula<-",
               "parent_compound_name",
-              "parent_compound_name<-"
+              "parent_compound_name<-",
+	      "rtf",
+	      "rtf<-"
               )
